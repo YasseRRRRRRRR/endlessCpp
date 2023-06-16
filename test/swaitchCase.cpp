@@ -6,38 +6,39 @@
 
 
 #include<iostream>
+using namespace std;
 
 int main()
 {
     char menuItem;
-    std::cout<<"Choose your holiday package:\n";
-    std::cout<<"L: luxury package\nS: standard package\n";
-    std::cout<<"B: basic package ";
+    cout<<"Choose your holiday package:\n";
+    cout<<"L: luxury package\nS: standard package\n";
+    cout<<"B: basic package ";
     
-    std::cin>>menuItem;
-    std::cout<<menuItem<<"\n";
-        std::cout<<"The "<<menuItem<<" package includes:\n";
+    cin>>menuItem;
+    cout<<menuItem<<"\n";
+        cout<<"The "<<menuItem<<" package includes:\n";
     
     switch(menuItem)
     {
         case('L'): 
         {
-            std::cout<<"\tSpa Day\n";
-            std::cout<<"\tSailboat Tour\n";
+            cout<<"\tSpa Day\n";
+            cout<<"\tSailboat Tour\n" <<endl;
         }
         case('S'):
         {
-            std::cout<<"\tCity Tour\n";
-            std::cout<<"\tComplimentary Happy Hour\n";  
+            cout<<"\tCity Tour\n";
+            cout<<"\tComplimentary Happy Hour\n" <<endl;  
         }
         case('B'):
         {
-            std::cout<<"\tAirport Transfers\n";
-            std::cout<<"\tComplimentary Breakfast\n"; 
+            cout<<"\tAirport Transfers\n";
+            cout<<"\tComplimentary Breakfast\n" <<endl; 
             break;
         }
         default:
-            std::cout<<"Please select the L,S,B package.\n";
+            cout<<"Please select the L,S,B package.\n";
     }
     return 0;
 }
