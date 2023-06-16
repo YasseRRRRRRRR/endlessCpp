@@ -30,7 +30,7 @@ int main()
         {
             cout<<"\tCity Tour\n";
             cout<<"\tComplimentary Happy Hour\n" <<endl;  
-        }
+        }       
         case('B'):
         {
             cout<<"\tAirport Transfers\n";
