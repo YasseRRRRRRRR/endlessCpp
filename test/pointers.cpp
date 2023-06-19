@@ -10,11 +10,16 @@ using namespace std;
 
 int main()
 {
-    int givenInt = 5;
-    float givenFloat = 50.5;
-    double givenDouble = 6 ;
-    std::string givenString = "VH is a terrible person";
+    int givenInt;
+    cin >> givenInt;
+    float givenFloat;
+    cin >> givenFloat;
+    double givenDouble;
+    cin >> givenDouble;
+    std::string givenString;
+    cin >> givenString;
     char givenChar;
+    cin >> givenChar;
     
     int *pointertogivenInt = &givenInt;
     float *pointertogivenFloat = &givenFloat;
@@ -26,6 +31,6 @@ int main()
     cout<< *pointertogivenFloat << " is the addresss and the value of "<< givenFloat <<endl;
     cout<< *pointertogivenDouble << " is the addresss and the value of "<< givenDouble <<endl;
     cout<< *pointertogivenString << " is the addresss and the value of "<< givenString <<endl;
-   // cout<< *pointertogivenChar << " is the addresss and the value of "<< givenChar <<endl;
+    cout<< *pointertogivenChar << " is the addresss and the value of "<< givenChar <<endl;
     return 0;
 }
