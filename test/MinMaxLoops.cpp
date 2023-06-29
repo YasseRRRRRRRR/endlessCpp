@@ -1,44 +1,39 @@
 #include <iostream>
-#include <io.h>
+using namespace std;
 
-
-
-using namespace std; 
-int main()
-{
-    int userInput = 0;
-    int maxNumber = 0;
-    int minNumber = 100;
+int main() {
+    int maxNumber = -1; // initialize maxNumber to a very small value
+    int minNumber = 101; // initialize minNumber to a very large value
     int sumTotal = 0;
-    float average = 0;
     int count = 0;
-    
-    //get the numbers from the user
-    while(true)
-    {
-        cout << "Enter a number (or -1 to quit): ";
-        scanf("%d", &userInput);
-        cout << "\n";
-        
-        if(userInput == -1)
-        {
-            break;
+    int inputs[15];
+
+    for (int i = 0; i < 15; i++) {
+        cout << "Enter a number: ";
+        cin >> inputs[i];
+        cout << endl;
+
+        if (inputs[i] > maxNumber) {
+            maxNumber = inputs[i];
         }
-        
-        if(userInput > maxNumber)
-        {//the biggest number entered so far is the max number
-            maxNumber = userInput;
+        if (inputs[i] < minNumber) {
+            minNumber = inputs[i];
         }
-        if(userInput < minNumber)
-        {//the lowest number entered so far is the min number
-            minNumber = userInput;
-        }
-        sumTotal = sumTotal + userInput;
+        sumTotal += inputs[i];
         count++;
     }
-    cout << "Maximum number = " << maxNumber << "\n";
-    cout << "Minimum number = " << minNumber << "\n";
-    average = sumTotal / count;
-    cout << "Average = " << average << "\n";
+
+    double average = static_cast<double>(sumTotal) / count;
+
+    cout << "Inputs: ";
+    for (int i = 0; i < count; i++) {
+        cout << inputs[i] << " ";
+    }
+    cout << endl;
+
+    cout << "Max number: " << maxNumber << endl;
+    cout << "Min number: " << minNumber << endl;
+    cout << "Average: " << average << endl;
+
     return 0;
 }
