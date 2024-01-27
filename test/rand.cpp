@@ -16,8 +16,8 @@ int main() {
     int numb = rand() % 10;
     cout << numb;
 
-    //double result = pow(2,3);
-    //cout << result;
+    double result = pow(2,3);
+    cout << result;
    
     return 0;
 }   
